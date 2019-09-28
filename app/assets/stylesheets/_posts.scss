@@ -111,6 +111,12 @@
 .menu {
   float:right;
   width: 300px;
-  height: 100px;
-  background-color: pink;
+  min-height: 100px;
+  border: solid 2px $color;
+  &__users {
+    margin: 20px;
+  }
+  &__user {
+    margin-left: 10px;
+  }
 }

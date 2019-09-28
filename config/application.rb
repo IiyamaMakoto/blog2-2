@@ -15,5 +15,6 @@ module Blog2
       g.test_framework false
     end
     config.load_defaults 5.2
+    config.time_zone = 'Tokyo'
   end
 end

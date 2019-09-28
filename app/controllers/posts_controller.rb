@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(id: 'desc')
+    @users = User.order(id: 'asc')
   end
 
   def new

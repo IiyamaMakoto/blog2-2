@@ -1,0 +1,6 @@
+.menu__users
+  ユーザー一覧
+  - @users.each do |user|
+    .menu__user
+      = link_to "・#{user.name}", user_path(user)
+  = link_to "全ユーザーの記事を表示", root_path

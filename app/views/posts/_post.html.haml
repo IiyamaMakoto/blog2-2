@@ -6,6 +6,7 @@
         = link_to 'edit', "posts/#{post.id}/edit"
         = link_to 'delete', "posts/#{post.id}", method: :delete, data: {confirm: "削除しますか？"}
   .post__text
-    = post.text
+    = simple_format(post.text)
   .post__date
-    = post.created_at
+    = post.user.name
+    = post.created_at.strftime("%Y/%m/%d %H:%M")
