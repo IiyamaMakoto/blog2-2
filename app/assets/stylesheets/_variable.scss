@@ -1,0 +1,9 @@
+@mixin clearfix{ 
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+$color: #fe9999;

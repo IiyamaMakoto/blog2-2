@@ -1,0 +1,8 @@
+.header
+  .header__title
+    = link_to 'MyBlog2', '/'
+  - if user_signed_in?
+    = link_to 'sign out', destroy_user_session_path, class: "header__btn", method: :delete
+    = link_to 'new post', new_post_path, class: "header__btn"
+  - unless user_signed_in?
+    = link_to 'sign in', new_user_session_path, class: "header__btn"

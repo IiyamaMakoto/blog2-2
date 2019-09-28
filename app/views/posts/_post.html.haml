@@ -1,0 +1,11 @@
+.post
+  .post__title
+    = post.title
+    .post__edit
+      - if user_signed_in? && post.user.id == current_user.id
+        = link_to 'edit', "posts/#{post.id}/edit"
+        = link_to 'delete', "posts/#{post.id}", method: :delete, data: {confirm: "削除しますか？"}
+  .post__text
+    = post.text
+  .post__date
+    = post.created_at

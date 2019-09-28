@@ -1,0 +1,116 @@
+.header {
+  @include clearfix;
+  height:60px;
+  background-color: $color;
+  padding: 0 20px;
+  &__title {
+    float: left;
+    font-size: 2em;
+    line-height: 60px;
+    padding-left: 40px;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+  }
+  }
+  &__btn {
+    float: right;
+    background-color: #fff;
+    border: solid 1px red;
+    margin: 13px 20px 0 0;
+    padding: 5px 10px;
+    color: red;
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  @include clearfix;
+  width: 960px;
+  margin: 20px auto;
+}
+.posts {
+  float: left;
+  width: 630px;
+  margin: 0 auto;
+  border: solid 2px $color;
+}
+
+.post {
+  width: 600px;
+  margin: 30px auto 40px;
+  border: solid 2px $color;
+  &__title {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: $color;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    padding: 0 100px 0 10px;
+  }
+  &__edit {
+    background-color: $color;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align:right;
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  }
+  &__text {
+    margin: 10px;
+  }
+  &__date {
+    text-align: right;
+    color: lightgray;
+    margin-right: 10px;
+  }
+}
+.newpost {
+  width: 600px;
+  margin: 30px auto 40px;
+  border: solid 2px $color;
+  &__title {
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    background-color: $color;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  &__text {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+  }
+  &__send {
+    text-align: center;
+  }
+  &__create {
+    width: 100%;
+    height: 50px;
+    padding: 10px;  
+  }
+}
+
+.menu {
+  float:right;
+  width: 300px;
+  height: 100px;
+  background-color: pink;
+}
