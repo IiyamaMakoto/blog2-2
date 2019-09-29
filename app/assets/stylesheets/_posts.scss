@@ -34,11 +34,13 @@
   width: 630px;
   margin: 0 auto;
   border: solid 2px $color;
+  padding: 0 10px 40px;
+  box-sizing: border-box;
 }
 
 .post {
   width: 600px;
-  margin: 30px auto 40px;
+  margin: 30px auto 10px;
   border: solid 2px $color;
   &__title {
     position: relative;
@@ -68,7 +70,9 @@
     }
   }
   &__text {
-    margin: 10px;
+    margin: 10px 10px 20px;
+    position: relative;
+    top: 10px;
   }
   &__date {
     text-align: right;
@@ -90,6 +94,7 @@
     border: none;
     padding-left: 10px;
     box-sizing: border-box;
+    outline: none;
   }
   &__text {
     width: 100%;
@@ -97,6 +102,8 @@
     padding: 10px;
     border: none;
     box-sizing: border-box;
+    resize: none;
+    outline: none;
   }
   &__send {
     text-align: center;
@@ -118,5 +125,10 @@
   }
   &__user {
     margin-left: 10px;
+  a {  color: darkred; }
   }
+}
+
+.outline-none {
+  outline: none;
 }
