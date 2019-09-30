@@ -107,6 +107,7 @@
   }
   &__send {
     text-align: center;
+    a { color: $color; }
   }
   &__create {
     width: 100%;

@@ -14,7 +14,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    get_post
+  end
+
+  def update
+    @post = Post.update(post_params)
   end
 
   def destroy
@@ -22,8 +26,17 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    get_post
+  end
+
   private
+
   def post_params
     params.require(:post).permit(:title, :text).merge(user_id: current_user[:id])
+  end
+
+  def get_post
+    @post = Post.find(params[:id])
   end
 end
