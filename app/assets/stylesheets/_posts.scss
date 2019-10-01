@@ -1,8 +1,15 @@
 .header {
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
   @include clearfix;
-  height:60px;
+  width: 100vw;
+  height: 65px;
   background-color: $color;
   padding: 0 20px;
+  border-bottom: solid 5px #fff;
   &__title {
     float: left;
     font-size: 2em;
@@ -27,7 +34,7 @@
 .wrapper {
   @include clearfix;
   width: 960px;
-  margin: 20px auto;
+  margin: 80px auto;
 }
 .posts {
   float: left;
