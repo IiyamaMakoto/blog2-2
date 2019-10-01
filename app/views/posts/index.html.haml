@@ -2,5 +2,7 @@
 .wrapper
   .posts
     = render @posts
+    .paginate
+      = paginate @posts
   .menu
     = render partial: "menu"

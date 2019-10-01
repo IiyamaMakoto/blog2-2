@@ -32,9 +32,9 @@
 .posts {
   float: left;
   width: 630px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   border: solid 2px $color;
-  padding: 0 10px 40px;
+  padding: 0 10px 30px;
   box-sizing: border-box;
 }
 
@@ -132,4 +132,21 @@
 
 .outline-none {
   outline: none;
+}
+
+.paginate {
+  margin-top: 15px;
+}
+
+.page a,
+.first a,
+.next a,
+.prev a,
+.last a {
+  color: $color;
+}
+
+.post-error {
+  text-align: center;
+  color: darkred;
 }

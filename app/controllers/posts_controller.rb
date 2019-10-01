@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-
+  
   def index
-    @posts = Post.includes(:user).order(id: 'desc')
+    @posts = Post.includes(:user).page(params[:page]).per(5).order(created_at: 'desc')
     @users = User.order(id: 'asc')
   end
 
@@ -10,7 +10,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
+    unless @post.save
+      render action: :new
+    end
   end
 
   def edit
@@ -18,7 +21,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.update(post_params)
+    @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+      unless @post.update(post_params)
+        render action: :edit
+      end
+    end
   end
 
   def destroy

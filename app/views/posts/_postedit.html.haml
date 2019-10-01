@@ -3,5 +3,8 @@
     = form_for @post do |f|
       = f.text_field :title, class: "newpost__title", placeholder: "タイトルを入力"
       = f.text_area :text, class: "newpost__text", placeholder: "ブログの本文を入力"
+      - if @post.errors.any?
+        .post-error
+          空欄では投稿できません
       .newpost__send
-        = f.submit value: "送信"
+        = f.submit value: "投稿"
