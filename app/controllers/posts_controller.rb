@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    get_post
     if @post.user_id == current_user.id
       unless @post.update(post_params)
         render action: :edit
